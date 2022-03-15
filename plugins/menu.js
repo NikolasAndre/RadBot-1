@@ -8,28 +8,29 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮
-┃╭┈─────────────⩵꙰ཱི࿐
-┃╰── %me ──➤ ↶↷*
-╰•͙✩̣̣̣̣ Hai, %name!
-⁙┃〲
-⁙┃〲 Tersisa *%limit Limit*
-⁙┃〲 Role *%role*
-⁙┃〲 Level *%level (%exp / %maxexp)* [%xp4levelup]
-⁙┃〲 %totalexp XP secara Total
-⁙┃〲 
-⁙┃〲 Tanggal: *%week %weton, %date*
-⁙┃〲 Tanggal Islam: *%dateIslamic*
-⁙┃〲 Waktu: *%time*
-⁙┃〲
-⁙┃〲 Uptime: *%uptime (%muptime)*
-⁙┃〲 Database: %rtotalreg dari %totalreg
-⁙┃〲
-⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°
+╭══════════════════
+║╭──❉[ *Hai, %name!* ]❉──
+║│➸ 𝘾𝙧𝙚𝙖𝙩 𝘽𝙮 𝙇𝙮𝙣𝙓𝙯𝙮
+║│➸ Tersisa *%limit Limit*
+║│➸ Role *%role*
+║│➸ Level *%level (%exp / %maxexp)* [%xp4levelup]
+║│➸ %totalexp XP secara Total
+║╰────────────────
+╰══════════════════
+╭══════════════════
+║╭──❉[ 𝙒𝙖𝙠𝙩𝙪 ]❉───
+║│➸ Tanggal: *%week %weton, %date*
+║│➸ Tanggal Islam:
+║│➸ *%dateIslamic*
+║│➸ Waktu: *%time*
+║│➸ Uptime: *%uptime (%muptime)*
+║│➸ Database: %rtotalreg dari %totalreg
+║╰──────────────────
+╰════════════════════
 %readmore`.trimStart(),
   header: '┏━━ꕥ〔 *%category* 〕ꕥ━⬣',
-  body: '┃✾ %cmd %islimit %isPremium',
-  footer: '┗━━━━ꕥ',
+  body: '┃➸l %cmd %islimit %isPremium',
+  footer: '┗━ꕥ',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -222,8 +223,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `𝘾𝙧𝙚𝙖𝙩 𝘽𝙮 𝙇𝙮𝙣𝙓𝙯𝙮`.trim(),
-                        "footerText": "┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
+                        "description": `┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
 ┃⬡ 𝘼𝙠𝙩𝙞𝙛 𝙎𝙚𝙡𝙖𝙢𝙖 _*${uptime}*_
 ┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 _*${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}*_
 ┃⬡ _*${Object.keys(global.db.data.users).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖
@@ -231,7 +231,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┃⬡ _*${conn.blocklist.length}*_ 𝙏𝙚𝙧𝙗𝙡𝙤𝙘𝙠
 ┃⬡ _*${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}*_ 𝘾𝙝𝙖𝙩 𝙩𝙚𝙧𝙗𝙖𝙣𝙣𝙚𝙙
 ┃⬡ _*${Object.entries(global.db.data.users).filter(user => user[1].banned).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖 𝙏𝙚𝙧𝙗𝙖𝙣𝙣𝙚𝙙
-┗━━━━━━━━⬣",
+┗━━━━━━━━⬣`.trim(),
+                        "footerText": "𝘾𝙧𝙚𝙖𝙩 𝘽𝙮 𝙇𝙮𝙣𝙓𝙯𝙮",
                         "buttonText": "*Klik Disini*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
