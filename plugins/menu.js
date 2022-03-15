@@ -13,13 +13,15 @@ const defaultMenu = {
 ║│➸ 𝘾𝙧𝙚𝙖𝙩 𝘽𝙮 𝙇𝙮𝙣𝙓𝙯𝙮
 ║│➸ Tersisa *%limit Limit*
 ║│➸ Role *%role*
-║│➸ Level *%level (%exp / %maxexp)* [%xp4levelup]
+║│➸ Level 
+║│➸ *%level (%exp / %maxexp)* [%xp4levelup]
 ║│➸ %totalexp XP secara Total
 ║╰────────────────
 ╰══════════════════
 ╭══════════════════
 ║╭──❉[ 𝙒𝙖𝙠𝙩𝙪 ]❉───
-║│➸ Tanggal: *%week %weton, %date*
+║│➸ Tanggal: 
+║│➸ *%week %weton, %date*
 ║│➸ Tanggal Islam:
 ║│➸ *%dateIslamic*
 ║│➸ Waktu: *%time*
@@ -29,7 +31,7 @@ const defaultMenu = {
 ╰════════════════════
 %readmore`.trimStart(),
   header: '┏━━ꕥ〔 *%category* 〕ꕥ━⬣',
-  body: '┃➸l %cmd %islimit %isPremium',
+  body: '┃➸ %cmd %islimit %isPremium',
   footer: '┗━ꕥ',
   after: `
 *%npmname@^%version*
