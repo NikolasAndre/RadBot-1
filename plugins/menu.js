@@ -27,10 +27,9 @@ const defaultMenu = {
 ⁙┃〲
 ⁙╰•°°°🕊°°°°°🕊°°°°°°🕊°°°°°°°°
 %readmore`.trimStart(),
-  header: '║╭──❉ 〔 %category〕❉──',
-  body: '║│➸ %cmd %islimit %isPremium',
-  footer: '║╰────────────────────
-╰═════════════════════',
+  header: '┏━━ꕥ〔 *%category* 〕ꕥ━⬣',
+  body: '┃✾ %cmd %islimit %isPremium',
+  footer: '┗━━━━ꕥ',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -223,7 +222,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
+                        "description": `𝘾𝙧𝙚𝙖𝙩 𝘽𝙮 𝙇𝙮𝙣𝙓𝙯𝙮`.trim(),
+                        "footerText": "┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
 ┃⬡ 𝘼𝙠𝙩𝙞𝙛 𝙎𝙚𝙡𝙖𝙢𝙖 _*${uptime}*_
 ┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 _*${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}*_
 ┃⬡ _*${Object.keys(global.db.data.users).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖
@@ -231,8 +231,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 ┃⬡ _*${conn.blocklist.length}*_ 𝙏𝙚𝙧𝙗𝙡𝙤𝙘𝙠
 ┃⬡ _*${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}*_ 𝘾𝙝𝙖𝙩 𝙩𝙚𝙧𝙗𝙖𝙣𝙣𝙚𝙙
 ┃⬡ _*${Object.entries(global.db.data.users).filter(user => user[1].banned).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖 𝙏𝙚𝙧𝙗𝙖𝙣𝙣𝙚𝙙
-┗━━━━━━━━⬣`.trim(),
-                        "footerText": "Hi kak >//<",
+┗━━━━━━━━⬣",
                         "buttonText": "*Klik Disini*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
