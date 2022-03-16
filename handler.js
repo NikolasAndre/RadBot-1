@@ -595,7 +595,7 @@ vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;WA;;;\nFN:WA\nTEL;type=CELL;type=VOICE;waid
       case 'demote':
         if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
         text = text.replace('@user', '@' + participants[0].split('@')[0])
-        let kntl = fs.readFileSync('./src/RadBotZ.jpg')
+        let kntl = fs.readFileSync('./src/93278eaa12fd253a4fe3cc08a0b219bc.jpg')
         if (chat.detect) this.send2ButtonLoc(jid, kntl, text, watermark, 'MENU', '#menu', 'OWNER', '#owner', null, {
           contextInfo: {
             mentionedJid: this.parseMention(text)
@@ -648,12 +648,12 @@ global.dfail = (type, m, conn) => {
   }[type]
   if (owr) return conn.sendSticker(m.chat, 'https://telegra.ph/file/2848948d64ea43302c882.png', m ,{sendEphemeral: true})
   let msg = {
-    owner: 'Khusus owner, tolol🤸',
+    owner: 'Khusus owner kak',
     mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Khusus premium, tolol🤸',
+    premium: 'Khusus premium kak',
     group: 'Perintah ini hanya dapat digunakan di grup!',
     private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Khusus Admin group, tolol🤸',
+    admin: 'Khusus Admin group kak',
     nsfw: 'Perintah ini hanya bisa diaktifkan oleh owner',
   }[type]
   if (msg) return conn.sendButton(m.chat, msg, watermark, 'OK', 'Nanii', m)
@@ -664,7 +664,7 @@ global.dfail = (type, m, conn) => {
   let unreg = {
     unreg: `Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar LynXzy.16*`
   }[type]
-  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©LynXzy_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/RadBotZ.jpg')}}})
+  if (unreg) return conn.sendButton(m.chat, `Halo kak ${name} Sebelum menggunakan fitur ini Harap Verify Terlebih dahulu`, watermark, 'Verify', `#daftar ${name}.17`, { key: { fromMe: false, remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { message: `©LynXzy_\nJam ${time}`, itemCount: 2022, thumbnail: fs.readFileSync('./src/93278eaa12fd253a4fe3cc08a0b219bc.jpg')}}})
 }
 
 let chalk = require('chalk')
