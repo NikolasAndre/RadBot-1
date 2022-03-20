@@ -251,6 +251,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "title": "|👑|Sewa bot - Premium",
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
+                                }, {
+                                    "title": "|💌|Group Bot",
+                                    "description": "Join bang",
+                                    "rowId": ".gcbot"
                                 }],
                                 "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
