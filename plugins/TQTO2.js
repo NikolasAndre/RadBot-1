@@ -2,7 +2,7 @@
 let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, `
 *Pertanyaan:* ${m.text}
-*Jawaban:* ${pickRandom(['Ya','Mungkin iya','Mungkin','Mungkin tidak','Tidak','Tidak mungkin'Tanya bapaklu','G tau gw bukan tuhan','YNTKTS','Iya keknya'])}
+*Jawaban:* ${pickRandom(['Ya','Mungkin iya','Mungkin','Mungkin tidak','Tidak','Tidak mungkin','Tanya bapaklu','G tau gw bukan tuhan','YNTKTS','Iya keknya'])}
 `.trim(), m)
 }
 handler.help = ['ᴄᴀʟɪᴘʜ','ʟᴀʏs','ᴢᴇᴋs','xᴛᴇᴀᴍ','ʟᴏʟʜᴜᴍᴀɴ']
