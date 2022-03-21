@@ -32,7 +32,7 @@ const defaultMenu = {
 %readmore`.trimStart(),
   header: '┏━━ꕥ〔 *%category* 〕ꕥ━⬣',
   body: '┃➸ %cmd %islimit %isPremium',
-  footer: '┗━ꕥ',
+  footer: '┗━━━ꕥ',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -227,7 +227,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                         "title": `*${ucapan()}, ${name}*`.trim(),
                         "description": `┏━━〔 𝐒𝐓𝐀𝐓𝐔𝐒 〕━⬣
 ┃⬡ 𝘼𝙠𝙩𝙞𝙛 𝙎𝙚𝙡𝙖𝙢𝙖 _*${uptime}*_
-┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 _*${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}*_
+┃⬡ 𝘽𝙖𝙩𝙚𝙧𝙖𝙞 ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
 ┃⬡ _*${Object.keys(global.db.data.users).length}*_ 𝙋𝙚𝙣𝙜𝙜𝙪𝙣𝙖
 ┃⬡ _*${totaljadibot.length}*_ 𝙅𝙖𝙙𝙞𝙗𝙤𝙩
 ┃⬡ _*${conn.blocklist.length}*_ 𝙏𝙚𝙧𝙗𝙡𝙤𝙘𝙠
@@ -240,19 +240,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                         "sections": [
                             {
                                 "rows": [{
-                                    "title": "|🛠️|Status Bot",
+                                    "title": "|🛠️| Status Bot",
                                     "description": "Status dan informasi Bot.",
                                     "rowId": ".botstatus"
                                 }, {
-                                    "title": "|❗|Rules",
+                                    "title": "|❗| Rules",
                                     "description": "User yang bijak selalu mematuhi Rules.",
                                     "rowId": ".rules"
                                 }, {
-                                    "title": "|👑|Sewa bot - Premium",
+                                    "title": "|👑| Sewa bot - Premium",
                                     "description": "Untuk kamu yang ingin melihat daftar harga sewa dan premium.",
                                     "rowId": ".sewabot"
                                 }, {
-                                    "title": "|💌|Group Bot",
+                                    "title": "|💌| Group Bot",
                                     "description": "Join bang",
                                     "rowId": ".gcbot"
                                 }],
@@ -367,7 +367,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     "description": "Info Tentang Bot",
                                     "rowId": ".? info"
                                 }, { 
-                                    "title": "|─|Tanpa Kategori",
+                                    "title": "|─| Tanpa Kategori",
                                     "description": "",
                                     "rowId": ".? tanpakategori"
                                 }, { 
@@ -378,19 +378,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                 "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": "|👩🏻‍💼|Owner bot",
+                                    "title": "|👩🏻‍💼| Owner bot",
                                     "description": "pemilik Bot",
                                     "rowId": ".owner"
                                 }, {
-                                    "title": "|💰|Donasi",
+                                    "title": "|💰| Donasi",
                                     "description": "Jangan lupa donasi untuk mendukung bot agar aktif selalu",
                                     "rowId": ".donasi"
                                 }, {
-                                    "title": "|🥀|Kata penutup",
+                                    "title": "|🥀| Kata penutup",
                                     "description": "Terimakasih untuk user yang telah menggunakan bot, jika ada kesalahan atau permintaan bisa chat ke nomor owner\nNote: chat P/main² tidak akan di respon(user bisa terkena banned/block)",
                                     "rowId": ".creator"
                                 }, {
-                                    "title": "|❤️|Thanks To",
+                                    "title": "|❤️| Thanks To",
                                     "description": "Terima kasih banyak untuk user yang telah berpartisipasi dalam bot",
                                     "rowId": ".tqto"
                                 }],
@@ -512,7 +512,7 @@ function ucapan() {
     res = "Selamat pagi🌄"
   }
   if (time > 10) {
-    res = "Selamat siang🌄"
+    res = "Selamat siang🏖️"
   }
   if (time >= 15) {
     res = "Selamat sore🌇"
